@@ -1,0 +1,64 @@
+meta {
+  name: Update Whitelisted Senders
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url_email}}/api/whitelisted-senders/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 887fb782-a064-7c8c-b8a1-db6c9079a064
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "displayInfo": "string",
+    "emailAddress": {
+      "displayName": "John Doe",
+      "emailAddress": "user@example.com",
+      "isActive": true,
+      "isDeleted": false,
+      "mailboxHost": "imap.gmail.com",
+      "mailboxPassword": "password",
+      "mailboxPort": 993,
+      "mailboxUsername": "user@example.com",
+      "useSSL": true,
+      "version": 9345,
+      "id": "550e8400-e29b-41d4-a716-446655440000",
+      "createdAt": "1974-05-08T13:45:31.690Z",
+      "updatedAt": "2011-09-21T11:08:27.164Z",
+      "deletedAt": "1967-05-17T17:06:37.593Z",
+      "deletedBy": "550e8400-e29b-41d4-a716-446655440000",
+      "active": true
+    },
+    "isActive": false,
+    "isDeleted": false,
+    "senderEmail": "string",
+    "senderName": "string",
+    "version": 9133,
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "createdAt": "1963-01-31T21:25:37.207Z",
+    "updatedAt": "2017-11-24T06:25:51.376Z",
+    "deletedAt": "1955-11-26T14:39:44.249Z",
+    "deletedBy": "550e8400-e29b-41d4-a716-446655440000",
+    "active": false,
+    "emailAddressId": "236fdfeb-1233-ef95-abf8-24160b2cdd6c"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Update an existing entity by its UUID
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Get All Whitelisted Senders By EmailId
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url_email}}/api/whitelisted-senders/by-email/:emailId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  emailId: 501acf2b-f6ed-44cb-904c-f5e7a45f2fde
+}
+
+headers {
+  Accept: */*
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,36 @@
+meta {
+  name: Create whitelisted senders
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url_email}}/api/whitelisted-senders
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+      "senderEmail": "string@gmail.com",
+      "senderName": "string@gmail.com",
+      "isActive": true,
+      "version": 0,
+      "displayInfo": "string",
+      "active": true,
+      "emailAddressId": "501acf2b-f6ed-44cb-904c-f5e7a45f2fde"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Create a new entity with the provided data
+}

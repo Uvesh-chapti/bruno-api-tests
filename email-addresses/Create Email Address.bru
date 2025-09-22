@@ -1,0 +1,45 @@
+meta {
+  name: Create Email Address
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url_email}}/api/email-addresses
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "displayName": "John Doe",
+    "emailAddress": "techlogixit.testing@gmail.com",
+    "isActive": true,
+    "isDeleted": true,
+    "mailboxHost": "imap.gmail.com",
+    "mailboxPassword": "password",
+    "mailboxPort": 993,
+    "mailboxUsername": "user@example.com",
+    "useSSL": true,
+    "version": 4390,
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "createdAt": "1983-11-10T21:25:34.539Z",
+    "updatedAt": "1969-05-26T01:42:23.404Z",
+    "deletedAt": "1980-02-12T21:14:02.716Z",
+    "deletedBy": "550e8400-e29b-41d4-a716-446655440000",
+    "active": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Create a new entity with the provided data
+}

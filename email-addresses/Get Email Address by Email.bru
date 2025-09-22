@@ -1,0 +1,19 @@
+meta {
+  name: Get Email Address by Email
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url_email}}/api/email-addresses/email/techlogixit.testing@gmail.com
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve email address configuration by the email address string
+}

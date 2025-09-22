@@ -1,0 +1,24 @@
+meta {
+  name: Get All Processed Emails
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url_email}}/api/processed-emails?page=0&size=10
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 0
+  size: 10
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve entities with pagination support
+}

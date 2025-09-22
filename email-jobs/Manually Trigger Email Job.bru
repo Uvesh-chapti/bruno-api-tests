@@ -1,0 +1,23 @@
+meta {
+  name: Manually Trigger Email Job
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url_email}}/api/email-jobs/:emailId/trigger
+  body: none
+  auth: inherit
+}
+
+params:path {
+  emailId: 887fb782-a064-7c8c-b8a1-db6c9079a064
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Trigger immediate execution of email processing job for a specific email address
+}

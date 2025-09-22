@@ -1,0 +1,19 @@
+meta {
+  name: Trigger Email Processing for all Mailboxes
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url_email}}/api/mail-processing/trigger
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Manually initiate email processing for all active email addresses
+}
