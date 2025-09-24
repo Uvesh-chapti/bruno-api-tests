@@ -1,0 +1,26 @@
+meta {
+  name: Get All Clients
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/api/clients
+  body: none
+  auth: inherit
+}
+
+script:post-response {
+  let res = res.getBody();
+  let clientId = res[0].id;
+  
+  bru.setEnvVar("sample_client_id", clientId);
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve all active clients in the system.
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Get Email Job Status
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url_email}}/api/email-jobs/{{sample_email_id}}/status
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Get File by ID
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_url}}/api/extraction-files/{{sample_file_id}}
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve a file entity by its UUID.
+}

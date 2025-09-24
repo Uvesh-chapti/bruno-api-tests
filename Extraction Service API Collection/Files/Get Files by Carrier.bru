@@ -1,0 +1,19 @@
+meta {
+  name: Get Files by Carrier
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{base_url}}/api/extraction-files/by-carrier/{{sample_carrier_id}}
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve all files associated with a specific carrier.
+}

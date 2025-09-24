@@ -1,0 +1,23 @@
+meta {
+  name: Search Files by Name
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{base_url}}/api/extraction-files/search?name=document
+  body: none
+  auth: inherit
+}
+
+params:query {
+  name: document
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Search files by name (case-insensitive).
+}

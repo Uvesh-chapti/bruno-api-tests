@@ -1,0 +1,19 @@
+meta {
+  name: Check Client Exists
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base_url}}/api/clients/{{sample_client_id}}/exists
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Check if a client exists by ID.
+}

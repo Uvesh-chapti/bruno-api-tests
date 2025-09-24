@@ -1,0 +1,23 @@
+meta {
+  name: Search Carriers by Name
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{base_url}}/api/carriers/search?name=carrier
+  body: none
+  auth: inherit
+}
+
+params:query {
+  name: carrier
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Search carriers by name (case-insensitive).
+}

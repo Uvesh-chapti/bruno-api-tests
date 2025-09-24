@@ -1,0 +1,19 @@
+meta {
+  name: Get File Details
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base_url}}/api/extraction-files/{{sample_file_id}}/details
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Get detailed information about a file (returns DTO).
+}

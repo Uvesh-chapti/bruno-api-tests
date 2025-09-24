@@ -1,0 +1,19 @@
+meta {
+  name: Get Invoice by ID
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/api/invoices/{{sample_invoice_id}}
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve a specific invoice entity by its UUID.
+}

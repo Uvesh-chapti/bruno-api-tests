@@ -1,0 +1,23 @@
+meta {
+  name: Search Clients by Name
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{base_url}}/api/clients/search?name=client
+  body: none
+  auth: inherit
+}
+
+params:query {
+  name: client
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Search clients by name (case-insensitive).
+}

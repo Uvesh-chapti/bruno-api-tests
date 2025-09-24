@@ -1,0 +1,37 @@
+meta {
+  name: Update Whitelisted Senders
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url_email}}/api/whitelisted-senders/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: e536d774-c8f5-4200-9461-d77f67911bfb
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "emailAddressId": "e1fb3a3e-f8ca-4693-aaa7-233a3c44c590",
+    "isActive": true,
+    "senderEmail": "User9009@gmail.com",
+    "senderName": "User"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Update an existing entity by its UUID
+}

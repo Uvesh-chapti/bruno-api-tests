@@ -1,0 +1,34 @@
+meta {
+  name: Create Carrier
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/api/carriers
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Example Carrier",
+    "code": "CAR001",
+    "description": "Sample carrier for testing",
+    "contactEmail": "contact@carrier.com",
+    "contactPhone": "+1234567890",
+    "isActive": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Create a new carrier entity.
+}

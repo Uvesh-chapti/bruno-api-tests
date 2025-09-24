@@ -1,0 +1,15 @@
+meta {
+  name: Get Invoice by Extraction File ID
+  type: http
+  seq: 20
+}
+
+get {
+  url: {{base_url}}/api/invoices/by-extraction-file/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

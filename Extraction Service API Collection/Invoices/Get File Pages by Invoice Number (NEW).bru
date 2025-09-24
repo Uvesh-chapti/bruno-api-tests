@@ -1,0 +1,19 @@
+meta {
+  name: Get File Pages by Invoice Number (NEW)
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{base_url}}/api/invoices/{{sample_invoice_number}}/pages
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Get all file pages associated with an invoice number (NEW REST endpoint).
+}

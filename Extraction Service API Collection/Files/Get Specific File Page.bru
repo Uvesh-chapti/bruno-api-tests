@@ -1,0 +1,19 @@
+meta {
+  name: Get Specific File Page
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{base_url}}/api/extraction-files/{{sample_file_id}}/pages/1
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Get a specific page from a file by page number.
+}

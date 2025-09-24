@@ -1,0 +1,24 @@
+meta {
+  name: Download Page Range as ZIP
+  type: http
+  seq: 20
+}
+
+get {
+  url: {{base_url}}/api/extraction-files/{{sample_file_id}}/pages/download?start=1&end=5
+  body: none
+  auth: inherit
+}
+
+params:query {
+  start: 1
+  end: 5
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Download a range of pages as ZIP archive. Omit parameters to download all pages.
+}

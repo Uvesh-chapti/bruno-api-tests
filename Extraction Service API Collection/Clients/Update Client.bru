@@ -1,0 +1,35 @@
+meta {
+  name: Update Client
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url}}/api/clients/{{sample_client_id}}
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Updated Client Name",
+    "code": "CLI001",
+    "description": "Updated client description",
+    "contactEmail": "updated@client.com",
+    "contactPhone": "+1234567890",
+    "address": "456 Updated Street, City, State 54321",
+    "isActive": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Update an existing client entity.
+}

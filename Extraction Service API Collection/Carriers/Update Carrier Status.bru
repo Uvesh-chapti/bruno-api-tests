@@ -1,0 +1,23 @@
+meta {
+  name: Update Carrier Status
+  type: http
+  seq: 12
+}
+
+put {
+  url: {{base_url}}/api/carriers/{{sample_carrier_id}}/status?isActive=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  isActive: true
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Update the active status of a carrier.
+}

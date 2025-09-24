@@ -1,0 +1,23 @@
+meta {
+  name: Get Combined File Text with Custom Separator
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_url}}/api/ocr/files/{{sample_file_id}}/text/combined?separator=\n---PAGE-BREAK---\n
+  body: none
+  auth: inherit
+}
+
+params:query {
+  separator: \n---PAGE-BREAK---\n
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Get all page texts combined with a custom separator between pages.
+}

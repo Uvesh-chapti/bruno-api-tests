@@ -1,0 +1,24 @@
+meta {
+  name: Get File Text with Confidence Filter
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/api/ocr/files/{{sample_file_id}}/text?minConfidence=75.0&includeFailedPages=false
+  body: none
+  auth: inherit
+}
+
+params:query {
+  minConfidence: 75.0
+  includeFailedPages: false
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Get extracted text for a file with confidence filtering. Only returns pages with confidence score above the specified threshold.
+}

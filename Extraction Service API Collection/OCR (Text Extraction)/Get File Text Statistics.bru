@@ -1,0 +1,19 @@
+meta {
+  name: Get File Text Statistics
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base_url}}/api/ocr/files/{{sample_file_id}}/statistics
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Get comprehensive OCR statistics for a file including success rates, word counts, character counts, confidence scores, and processing times.
+}

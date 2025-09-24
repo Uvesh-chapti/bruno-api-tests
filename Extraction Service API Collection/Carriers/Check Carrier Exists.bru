@@ -1,0 +1,19 @@
+meta {
+  name: Check Carrier Exists
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base_url}}/api/carriers/{{sample_carrier_id}}/exists
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Check if a carrier exists by ID.
+}

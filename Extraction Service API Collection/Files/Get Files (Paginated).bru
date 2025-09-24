@@ -1,0 +1,24 @@
+meta {
+  name: Get Files (Paginated)
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/api/extraction-files/paginated?page=0&size=20
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 0
+  size: 20
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve files with pagination support.
+}

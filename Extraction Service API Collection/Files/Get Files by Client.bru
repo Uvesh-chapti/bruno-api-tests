@@ -1,0 +1,19 @@
+meta {
+  name: Get Files by Client
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{base_url}}/api/extraction-files/by-client/{{sample_client_id}}
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve all files associated with a specific client.
+}

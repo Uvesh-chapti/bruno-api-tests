@@ -1,0 +1,19 @@
+meta {
+  name: View Page File Inline
+  type: http
+  seq: 19
+}
+
+get {
+  url: {{base_url}}/api/extraction-files/{{sample_file_id}}/pages/1/view
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  View a specific page file inline in browser.
+}

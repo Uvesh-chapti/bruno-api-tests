@@ -1,0 +1,19 @@
+meta {
+  name: Get File Page Count
+  type: http
+  seq: 17
+}
+
+get {
+  url: {{base_url}}/api/extraction-files/{{sample_file_id}}/pages/count
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Get the total number of pages in a file.
+}

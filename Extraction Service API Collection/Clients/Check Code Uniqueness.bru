@@ -1,0 +1,19 @@
+meta {
+  name: Check Code Uniqueness
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{base_url}}/api/clients/code/CLI001/unique
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Check if a client code is unique in the system.
+}

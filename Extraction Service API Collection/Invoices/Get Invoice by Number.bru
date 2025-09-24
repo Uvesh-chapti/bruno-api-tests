@@ -1,0 +1,19 @@
+meta {
+  name: Get Invoice by Number
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{base_url}}/api/invoices/by-number/{{sample_invoice_number}}
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve an invoice by its invoice number. Now returns single invoice with totalPages count.
+}

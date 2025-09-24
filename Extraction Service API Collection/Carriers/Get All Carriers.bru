@@ -1,0 +1,30 @@
+meta {
+  name: Get All Carriers
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/api/carriers
+  body: none
+  auth: inherit
+}
+
+script:post-response {
+  let res = res.getBody();
+  
+  for (let i = 0; i < res.length; ++i) {
+      if (res[i].code == "midland") {
+          console.info(res[i].id)
+          bru.setEnvVar("sample_carrier_id", res[i].id);
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve all active carriers in the system.
+}

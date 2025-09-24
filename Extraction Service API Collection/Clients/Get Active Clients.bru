@@ -1,0 +1,19 @@
+meta {
+  name: Get Active Clients
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{base_url}}/api/clients/active
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve only active clients.
+}

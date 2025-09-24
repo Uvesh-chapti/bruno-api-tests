@@ -1,0 +1,19 @@
+meta {
+  name: View File Page by Invoice Number (Legacy)
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{base_url}}/api/invoices/by-number/{{sample_invoice_number}}/page/view
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  View the actual file page content associated with an invoice number (legacy endpoint for backward compatibility).
+}

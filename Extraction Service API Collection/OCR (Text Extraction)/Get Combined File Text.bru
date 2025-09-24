@@ -1,0 +1,19 @@
+meta {
+  name: Get Combined File Text
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/api/ocr/files/{{sample_file_id}}/text/combined
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Get all page texts combined into a single string. Default separator is double newline (\n\n).
+}

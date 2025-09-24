@@ -1,0 +1,23 @@
+meta {
+  name: Get Files by Status
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{base_url}}/api/extraction-files/by-status?status=COMPLETED
+  body: none
+  auth: inherit
+}
+
+params:query {
+  status: COMPLETED
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve files by their processing status.
+}

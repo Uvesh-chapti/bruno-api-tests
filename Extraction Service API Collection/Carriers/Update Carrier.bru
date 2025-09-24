@@ -1,0 +1,34 @@
+meta {
+  name: Update Carrier
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url}}/api/carriers/{{sample_carrier_id}}
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Updated Carrier Name",
+    "code": "CAR001",
+    "description": "Updated carrier description",
+    "contactEmail": "updated@carrier.com",
+    "contactPhone": "+1234567890",
+    "isActive": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Update an existing carrier entity.
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Delete Invoice
+  type: http
+  seq: 8
+}
+
+delete {
+  url: {{base_url}}/api/invoices/{{sample_invoice_id}}
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Soft delete an invoice. This will also remove associations with file pages.
+}

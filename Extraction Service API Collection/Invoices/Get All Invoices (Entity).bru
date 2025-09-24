@@ -1,0 +1,19 @@
+meta {
+  name: Get All Invoices (Entity)
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/api/invoices
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve all active invoices as entities (base controller endpoint).
+}

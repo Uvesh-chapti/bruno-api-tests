@@ -1,0 +1,33 @@
+meta {
+  name: Upload File
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/api/extraction-files/upload
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  file: @file(/Users/faizanahmed/Desktop/midland-combined.pdf)
+  carrierId: {{sample_carrier_id}}
+  clientId: {{sample_client_id}}
+  name: Sample Document
+}
+
+script:post-response {
+  let res = res.getBody();
+  let fileId = res.id;
+  
+  bru.setEnvVar("sample_file_id", fileId);
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Upload a file for processing. Requires multipart/form-data with file, carrierId, clientId, and optional name.
+}

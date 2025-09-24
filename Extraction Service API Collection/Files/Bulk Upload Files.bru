@@ -1,0 +1,25 @@
+meta {
+  name: Bulk Upload Files
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/api/extraction-files/bulk-upload
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  carrierId: {{sample_carrier_id}}
+  clientId: {{sample_client_id}}
+  files: @file(/Users/faizanahmed/Desktop/MIDLAND_BUNCH/MID_AUTOAR_39739_20250317.pdf)
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Upload multiple files for processing. Requires multipart/form-data with files array, carrierId, and clientId.
+}

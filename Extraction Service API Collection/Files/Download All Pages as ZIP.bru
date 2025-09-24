@@ -1,0 +1,19 @@
+meta {
+  name: Download All Pages as ZIP
+  type: http
+  seq: 21
+}
+
+get {
+  url: {{base_url}}/api/extraction-files/{{sample_file_id}}/pages/download
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Download all pages of a file as ZIP archive.
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Get Invoice Details by Number
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{base_url}}/api/invoices/by-number/{{sample_invoice_number}}/details
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve invoice details with full information by invoice number.
+}

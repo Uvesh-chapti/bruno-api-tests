@@ -1,0 +1,23 @@
+meta {
+  name: Update File Status
+  type: http
+  seq: 12
+}
+
+put {
+  url: {{base_url}}/api/extraction-files/{{sample_file_id}}/status?status=COMPLETED
+  body: none
+  auth: inherit
+}
+
+params:query {
+  status: COMPLETED
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Update the processing status of a file.
+}

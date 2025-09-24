@@ -1,0 +1,19 @@
+meta {
+  name: Get Invoice Details by ID
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_url}}/api/invoices/{{sample_invoice_id}}/details
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve a specific invoice as DTO with complete information including associated file pages.
+}

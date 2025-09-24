@@ -1,0 +1,19 @@
+meta {
+  name: Download Extraction File by Invoice ID
+  type: http
+  seq: 19
+}
+
+get {
+  url: {{base_url}}/api/invoices/{{sample_invoice_id}}/extraction-file/download
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Download the extraction file associated with an invoice ID (downloads first associated file).
+}

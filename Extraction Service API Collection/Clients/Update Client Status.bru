@@ -1,0 +1,23 @@
+meta {
+  name: Update Client Status
+  type: http
+  seq: 12
+}
+
+put {
+  url: {{base_url}}/api/clients/{{sample_client_id}}/status?isActive=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  isActive: true
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Update the active status of a client.
+}

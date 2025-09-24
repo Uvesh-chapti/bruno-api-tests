@@ -1,0 +1,61 @@
+meta {
+  name: Extraction Service API Collection
+}
+
+auth {
+  mode: none
+}
+
+vars:pre-request {
+  base_url: {{base_url}}
+  user_id: {{user_id}}
+}
+
+script:pre-request {
+  // Generate UUID for requests that need it
+  if (!bru.getGlobalEnvVar('user_id')) {
+      bru.setGlobalEnvVar('user_id', 'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11');
+  }
+  
+  // Generate random UUID for test data
+  function generateUUID() {
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+          return v.toString(16);
+      });
+  }
+  
+  bru.setGlobalEnvVar('random_uuid', generateUUID());
+}
+
+docs {
+  Complete API collection for the Extraction Service - a Spring Boot microservice for file extraction and processing with Domain Driven Design (DDD) architecture.
+  
+  ## Overview
+  This collection includes all REST endpoints for managing carriers, clients, files, and OCR text extraction with comprehensive CRUD operations, search functionality, and file processing capabilities.
+  
+  ## Base URL
+  `{{base_url}}/api`
+  
+  ## Authentication
+  No authentication required for development environment.
+  
+  ## Common Headers
+  - Content-Type: application/json (for JSON requests)
+  - X-User-ID: {{user_id}} (required for delete operations)
+  
+  ## Collection Organization
+  - **Carriers**: Manage carrier entities with business logic
+  - **Clients**: Manage client entities with business logic  
+  - **Files**: File upload, processing, and page management
+  - **OCR (Text Extraction)**: Extract and retrieve text from processed files using Tesseract OCR
+  
+  ## Usage
+  1. Import this collection into Postman
+  2. Import the corresponding environment file
+  3. Set appropriate environment (Development, Staging, Production)
+  4. Execute requests as needed
+  
+  ## Maintenance
+  This collection should be updated whenever new APIs are added to the service.
+}

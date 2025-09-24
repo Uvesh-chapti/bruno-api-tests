@@ -1,0 +1,19 @@
+meta {
+  name: Get Carrier by ID
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/api/carriers/{{sample_carrier_id}}
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve a specific carrier by its UUID.
+}

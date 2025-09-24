@@ -1,0 +1,29 @@
+meta {
+  name: Update Invoice
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{base_url}}/api/invoices/{{sample_invoice_id}}
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "invoiceNumber": "INV-2025-001-UPDATED"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Update an existing invoice entity. Note: File page associations are managed separately.
+}

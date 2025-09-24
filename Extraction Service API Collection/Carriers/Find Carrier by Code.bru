@@ -1,0 +1,19 @@
+meta {
+  name: Find Carrier by Code
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{base_url}}/api/carriers/code/CAR001
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Find a carrier by its unique code.
+}

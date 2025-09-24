@@ -1,0 +1,19 @@
+meta {
+  name: Get Page Text
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/api/ocr/pages/{{sample_page_id}}/text
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Get extracted text for a specific page with detailed metadata including confidence score, processing status, language detection, and processing duration.
+}

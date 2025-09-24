@@ -1,0 +1,23 @@
+meta {
+  name: Delete Client
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{base_url}}/api/clients/{{sample_client_id}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  X-User-ID: {{user_id}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Soft delete a client (requires X-User-ID header).
+}

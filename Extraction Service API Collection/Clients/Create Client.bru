@@ -1,0 +1,35 @@
+meta {
+  name: Create Client
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/api/clients
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Example Client",
+    "code": "CLI001",
+    "description": "Sample client for testing",
+    "contactEmail": "contact@client.com",
+    "contactPhone": "+1234567890",
+    "address": "123 Main Street, City, State 12345",
+    "isActive": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Create a new client entity.
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Find Carrier by Email
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{base_url}}/api/carriers/email/contact@carrier.com
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Find a carrier by its contact email.
+}
